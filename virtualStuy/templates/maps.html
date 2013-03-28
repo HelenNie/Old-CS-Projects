@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+<title>FloorMaps </title>
+<LINK rel ="stylesheet" type="text/css" href="static/css/tidybox.css">
+<LINK rel ="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body background="static/jpg/Green-And-Light-Blue.jpg">
+
+  <script src ="static/js/jquery.js"></script>
+  <script src ="static/js/tinybox.js"></script>
+  <script src ="static/js/maps.js"></script>
+  
+  <h1 align ="center">
+    <font face ="desdemona" size = 7>Virtual Floormaps
+  </h1>
+
+  <p>
+
+  </font>
+  <div align ="center">
+    <font size ="4">
+      See where you friends and teachers are!
+    </font>
+  </div>
+  
+  <form action="" method="post"></br>
+    <input type="submit" name="button" value="Logout"></input></br>
+    <input type="submit" name="button" value="View/Update Your Profile"></input></br>
+    <div id="filter" align="center">  
+      <p id="instruc">Choose which grade you'd like to see on the map:</p>
+      <select class="choose-grade">
+	<option value='9'>Freshmen</option>
+	<option value='10'>Sophomores</option>
+	<option value='11'>Juniors</option>
+	<option value='12'>Seniors</option> 
+	<option value='0'>Teachers</option>
+	<option value='13'>Everyone</option> 
+      </select></br></br>
+      <p id="instruc">Or enter the first name, last name, or both of the person you'd like to locate:</p>
+      <input type="text" id="searchName" onkeypress="enterKey();"></input>
+      <input type="button" name="button" id="search" value="Search"></input></br>
+      <select class="results" style="display:none;" ></select></br>
+      <p id="instruc">Below are maps of each floor of Stuy. Click a "Zoom" button to view a detailed map of the floor. Click on the bubbles to view profiles.</p></br>
+    </div>
+  </form>
+    
+  <div id="wrap1" style="position:relative;">
+    <div id="zoomButtons" style="float:right; position:relative; text-align:left; width:28% ;line-height:232%">
+      <p>
+	<input type="button" name="button" id="zoom-ten" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-nine" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-eight" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-seven" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-six" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-five" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-four" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-three" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-two" value="Zoom"></input>
+      <p>
+	<input type="button" name="button" id="zoom-one" value="Zoom"></input>
+      <p>
+    </div>
+    
+    <div id="svgs" style="float:left; position:absolute; text-align:right; width:70%; margin-right:35%">
+      <p id="svg-label">10TH FLOOR
+	<svg id="svg-ten" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">9TH FLOOR
+	<svg id="svg-nine" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">8TH FLOOR
+	<svg id="svg-eight" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">7TH FLOOR
+	<svg id="svg-seven" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">6TH FLOOR
+	<svg id="svg-six" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">5TH FLOOR
+	<svg id="svg-five" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">4TH FLOOR
+	<svg id="svg-four" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">3RD FLOOR
+	<svg id="svg-three" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">2ND FLOOR
+	<svg id="svg-two" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+      <p id="svg-label">1ST FLOOR
+	<svg id="svg-one" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="25">
+	</svg>
+    </div>  
+  </div>
+
+  <div id="wrap2" style="position:relative; margin-top:550px;">
+    <div id="schedule" style="float:right; position:relative; text-align:left; width:47%; line-height: 60%">
+    </div>
+    
+    <div id="restOfProfiles" style="float:left; position:absolute; width:53%; margin-left:36%; line-height: 60%">
+    </div>
+  </div>
+  
+</body>
+</html>

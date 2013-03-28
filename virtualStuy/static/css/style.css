@@ -1,0 +1,117 @@
+body { 
+        background-image:url("/static/jpg/blue_bars.jpg");
+	font-family: centurygothic;
+	font-size: 16px;
+	color:white;
+	margin: 10px;
+	padding-bottom:20px;
+	padding-left: 12px;
+}
+
+#instruc {
+        color:#FF9933;
+}
+
+#svg-label {
+        color:white;
+	font-size: 18px;
+	font-weight:900;
+}
+
+#zoom-map {
+	border-style: solid;
+
+}
+
+#svg-ten {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-nine {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-eight {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-seven {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-six {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-five {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-four {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-three {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-two {
+	border-style: solid;
+	border-color: white;
+}
+
+#svg-one {
+	border-style: solid;
+	border-color: white;
+}
+
+
+#home{
+	font-size: 30px;
+}
+
+.indent{
+	padding-left: 40px;
+}	
+
+a:link {
+	color: white;
+}
+
+a:hover {
+	color: green;
+}
+
+
+ul#navigation {
+	width:15px;
+}
+
+ul#navigation li {
+	list-style: none;
+	background-color: white;
+	border-top: solid 1px #39f;
+	text-align: left;
+	margin: 0px;
+}
+
+ul#navigation li a {
+	text-decoration:none;
+	display:block;
+}
+
+ul#navigation li a:hover{
+	color:#99FFCC;
+}
+
+ul#navigation li a:active{
+	color:#99FFCC;
+}

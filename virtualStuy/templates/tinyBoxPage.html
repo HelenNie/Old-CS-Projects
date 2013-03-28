@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<title>Floor {{floor}}</title>
+
+<link rel ="stylesheet" type="text/css" href="static/css/tidybox.css">
+<LINK rel ="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body bgcolor="000033">
+
+<script src ="static/js/jquery.js"></script>
+<script src ="static/js/tinyBoxPage.js"></script>
+
+
+
+<h1 align ="center">
+  <font face ="desdemona" size = 7>
+    Floor {{floor}}
+  </font>
+</h1>
+<p>
+
+<form align="center">
+  <p>Click the bubbles to view profiles!</p>
+  <button type="button" id="hideProfile">Hide Profile</button>
+  </br></br>
+</form>
+
+<div align = "center">
+  <svg id="zoom-map-odd" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="150"></svg>
+</div>
+
+<p>
+
+<div id="wrap">
+<font size ="2.5">
+
+<div id="schedule" style="float:right; position:relative; text-align:left; width:350px; margin-right: 100px; line-height: 15%">
+</div>
+
+<div id="restOfProfiles" style="position:relative; width:550px; margin-left:340px; line-height: 60%">
+</div>
+</font>
+</div>
+
+<p>
+
+<div align = "center">
+  <svg id="zoom-map-even" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="150"></svg>
+</div>
+
+<form>
+  <input type="text" style="display:none;" id="floor" value={{ floor }} />
+  <input type="text" style="display:none;" id="period" value={{ period }} />
+  
+  {% for id in IDs %}
+  <input type="text" style="display:none;" class="ID" value= {{ id }} />
+  {% endfor %}
+  
+</form>
+
+</body>
+</html>
