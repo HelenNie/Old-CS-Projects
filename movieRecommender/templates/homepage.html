@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    {% block head %}
+    <!--link rel="stylesheet" type="text/css" href="/htmlks/css/kickstart.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" href="/htmlks/style.css" media="all" /--> 
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      body{background-color:#FDFCDC}
+    </style>
+
+    <title>The Movie Recommender</title> <!--A classy page title-->
+
+    <script src="/static/js/jquery.js"></script>
+    <p><img src="{{url_for('static', filename='customLogo.jpg') }}"
+	    alt="LOGO"><b></p>
+    {% endblock %}
+  </head> 
+  
+  <body>
+    {% block body %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+
+</html>

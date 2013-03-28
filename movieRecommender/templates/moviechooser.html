@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+{% extends 'homepage.html' %}
+{% block head %}
+<div class="navbar">
+      <div class="navbar-inner">
+	<a class="brand">The Movie Recommender - The #1 Name in Movie Recommending</a>
+      </div>
+    </div>
+    <!--though this is not what a nav bar is really for (as one might guess, it's for navigating the site), we're using it to add an element of sophistication to an already fairly sophisticated web application-->
+
+    {{ super() }}
+{% endblock head %}
+
+<div 
+{% block body %}
+<div class="span11 offset1">
+<p>
+<h1 style="font-size:30px">Welcome to the Movie Recommender!</h1>
+<p>
+<div class="search_movie">
+<p class = "muted" style="font-size:18px">This site will inform you about
+  movies. First, start by searching for movies using one of the
+  following methods.
+  <br><br>
+ <div class = "span10"
+<p style="font-size:20px">Search based on a keyword from a movie title:
+<form action="" method="POST">
+<textarea name="searchdata" class="input-xxlarge" placeholder="Type
+ the name or a key word of the movie" rows="1"></textarea>
+<input type="submit" name="button" value="Search Movie" class="btn btn-small btn-info"><br><br>
+
+<p style="font-size:20px">Search based on an actor:
+<textarea name="searchperson" class="input-xxlarge" placeholder="Type
+ the name of an actor or actress" rows="1"></textarea>
+<input type="submit" name="button" value="Search Actor" class="btn btn-small btn-info"><br><br>
+<p style="font-size:20px">Select a genre:<p>
+<select name="genre_selection">
+{% for genre in genres['genres'] %}
+<option>{{genre['name']}}</option>
+{% endfor %}
+</select>
+
+<input type="submit" name="button" value="Genre Selection" class="btn btn-small btn-info">
+<br><br>
+
+<p style="font-size:20px">Movies playing in theaters now:
+<input type="submit" name="button" value="Now Playing Selection" class="btn btn-small btn-info"><br><br>
+
+<p style="font-size:20px">Movies that will soon be released:
+<input type="submit" name="button" value="Upcoming Selection" class="btn btn-small btn-info"><br><br>
+
+<p style="font-size:20px">Movies with the highest ratings:
+<input type="submit" name="button" value="Popular Selection"
+class="btn btn-small btn-info"><br><br>
+
+
+</form>
+</div>
+</div>
+</div>
+
+{% endblock body %}
+
+
+</html>

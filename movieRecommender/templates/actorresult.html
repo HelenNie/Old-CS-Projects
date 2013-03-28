@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+{% extends 'homepage.html' %}
+
+{% block head %}
+<div class="navbar">
+      <div class="navbar-inner">
+	<a class="brand">The Movie Recommender - The #1 Name in Movie Recommending</a>
+      </div>
+    </div>
+{{ super() }}
+{% endblock head %}
+
+
+{% block body %}
+<br>
+<div class="span9 offset1">
+{{headerThing}}
+<form action="" method="POST">
+
+<div class="alist">  
+<select id="alist">
+
+</select>
+
+</div>
+<input type="submit" name="button" id="back" value="back" class="btn btn-small btn-info"></input>
+</form>
+<div id="awkz"></div>
+<div id = movieTitle></div>
+<div id = noTrailer> </div>
+
+<script type="text/javascript" src="/static/js/swfobject.js"
+id="trailer"></script>
+
+<div id="ytapiplayer">
+</div>
+<br><br>
+<div id="results">
+</div>
+</div>
+
+<script>
+//loads the dropdown with the movies
+
+function getDropdownActor(){
+    $.getJSON("/get_dropdown_actor", function(data) {
+        $("#alist").empty();
+        console.log(data);
+	$("#alist").append('<option value="'+000+'">' + "Select an actor or actress:" + '<\p>');
+        for (var i = 0; i < data.length; i++) {
+	    $("#alist").append('<option value="'+data[i]['id']+'">'+data[i]['name']+'</option>');
+	    
+	}
+	$("#alist").change(loadstuff);
+    });
+}
+
+function loadstuff(data) {
+	      $("#results").empty();
+	      $("#awkz").empty();
+	      $("#ytapiplayer").empty();
+    var actorid = $(this).attr('value');
+    console.log(actorid);
+    loadMovies(actorid);
+}
+
+function loadMovies(actorid) {
+   $.getJSON("/get_movies_actor", {actorid: actorid}, function(data) {
+	      		$('#awkz').append('<select id="mlist">' + '</select>');
+
+        $("#mlist").empty();
+	$("#mlist").append('<option value="'+000+'">' + "Select a movie:" + '<\p>');
+
+        for (var i = 0; i< data.length; i++) {
+	    $("#mlist").append('<option value="'+data[i]['id']+'">'+data[i]['title']+'</option>');
+
+	  }
+	$("#mlist").change(loadInfo);
+	});
+}
+
+
+	     function loadInfo(data) {
+    var moviestuff = $(this).attr('value');
+    getInfo(moviestuff);
+	      }
+
+//fills the results div with the results
+function getInfo(movie_id){
+    var counter;
+    counter = 0;
+    $.getJSON("/get_info", {movie_id: movie_id}, function (data) {
+//new_tab(data['review']);
+	$('#results').empty();
+	$('#ytapiplayer').empty();
+	$("#movieTitle").empty();
+	$("#movieTitle").append("<p style="+ "font-size:20px"+"><b>" + data['title'] + "</b></p>");
+        for (var d in data) {
+	    if (data[d] == null)
+		$('#results').append('<p><b><i>' + d + ":"+ '</i></b>' + " unavailable" + '</p>');
+	    else if (d == "review"){
+		if (data[d] == "no review available")
+		    $('#results').append('<p><b><i>' + d + ":"+ '</i></b>' + ' ' + data[d] + '<\p>');
+		else{
+		    $('#results').append('<p><b><i>' + d + ": " + '</i></b><a id="rlink" href="'+data[d]+'">' + data[d] + '</a><\p>');
+		    $('#rlink').click(function() {
+			$(this).attr('target', '_blank');
+		    });
+		}
+	    }
+	    else if (d == "similar movies"){
+		$('#results').append('<p><b><i>' + d + ":"+ '</i></b></p>');
+		$('#results').append('<select id="similar">' + '</select>');
+		$('#similar').append('<option value="'+000+'">' + "Select a movie to view its info:" + '<\p>');
+		var titles = [];
+		var ids = [];
+		var dates = [];
+		var rtitles = data[d];
+		for (var thing in rtitles){
+		    id = rtitles[thing]['id'];
+		    title = rtitles[thing]['title'];
+		    date = rtitles[thing]['date'];
+		    $('#similar').append('<option value="'+id+'">' + title + " " + date + '<\p>');
+		}
+	    }
+	    else if (d != "trailer_id" && d != "id" ) {
+		$('#results').append('<p><b><i>' + d + ":"+ '</i></b>' + ' ' + data[d] + '<\p>');
+	    }
+        }
+	$('#similar').change(changePage);
+
+//stuff with the youtube API. Works! Wooo!
+	$('#noTrailer').empty();
+	movie_trailer_id = data['trailer_id'];
+	if (movie_trailer_id == 'IJNR2EpS0jw')
+	    $('#noTrailer').append('<p id="no_trailer" class = "muted"><b><i>' + "The Trailer could not be found. Please enjoy 'Dumb Ways To Die' instead!" + '<b><p><br><br>');
+	
+	    var params = { allowScriptAccess: "always" };
+	    var atts = { id: "myytplayer" };
+	    $("#myytplayer").attr('data', "http://www.youtube.com/v/" + movie_trailer_id + "?enablejsapi=1&playerapiid=ytplayer&version=3");
+	    var url = "http://www.youtube.com/v/" + movie_trailer_id + "?enablejsapi=1&playerapiid=ytplayer&version=3";
+	    swfobject.embedSWF(url,"ytapiplayer","425", "356", "8", null, null, params, atts);
+	
+    });
+}
+
+		      
+function changePage(data) {
+   var movieid = $(this).attr('value');
+    getInfo(movieid);
+}
+    //what's running
+$(document).ready(function(){
+    getDropdownActor();
+});
+</script> 
+
+{% endblock body %}
