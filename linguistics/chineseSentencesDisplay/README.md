@@ -1,5 +1,5 @@
 Chinese Sentences Display
-==============
+===========
 
 I am involved in a phonetics study about question intonation in Mandarin Chinese. I threw together a simple flask app that we can use in the recording booth to display sentences in a randomized order.
 
