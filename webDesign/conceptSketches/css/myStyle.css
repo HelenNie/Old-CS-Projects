@@ -1,0 +1,106 @@
+#header {
+  background-image: url('../images/gramophone-header.png');
+  color:white;
+}
+
+h1 {
+  margin-left:2%;
+}
+
+h2 {
+  margin-left:10%;
+}
+
+.tabs {
+  background: radial-gradient(#F82B4A 40%, white);
+  border-color:white;
+  color:white;
+  float:left;
+  padding: 0 15px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+
+.subtabs {
+  background: radial-gradient(#AAA69A 40%, white);
+  border-color:white;
+  color:white;
+  float:left;
+  padding: 0 15px;
+  margin-bottom: 0%;
+}
+
+.textDiv {
+  margin-top:5%;
+}
+
+.button {
+  border-radius:5px 5px 0px 0px;
+}
+
+.tabs:hover {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.tabs:active {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.tabs:focus {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.subtabs:hover {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.subtabs:active {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.subtabs:focus {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+.current {
+  background:white;
+  color:black;
+  border-color:white;
+  border-bottom:white;
+}
+
+#footer {
+  text-align:right;
+}
+
+#logo {
+  width:20%;
+  height:20%;
+}
+
+ul {
+  list-style-type: disc;
+  color: #F82B4A;
+}
+
+li p {
+  color: black;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Skeleton: Responsive CSS Boilerplate</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="bounce.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+  <div id="top" class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h4 class="hero-heading">Tired of cmd+tabbing?</h4>
+          <h5>Redesigning the laptop programming experience</h5>
+          <a id="getStarted" class="button button-primary" style="background-color:#00CCCC;border-color:#00CCCC;" href="#intro">Get Started</a>
+        </div>
+        <div class="one-half column">
+          <img id="macbook" class="macbook" src="images/macbookTransparent.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section values">
+    <div id="intro" class="container">
+      <div class="row">
+        <h1 style="text-align:center;">The Pros and Cons</h1>
+      </div>
+      <div class="row">
+        <div class="one-half column value">
+          <img class="u-max-full-width" src="images/laptopCode4.png">
+        </div>
+        <div class="one-half column value">
+          <p>Programmers are notoriously known for having too many applications open on their computer. A text editor, Google Chrome, the terminal--that's just the beginning. Don't forget API reference pages, email, Facebook, etc. Some have the luxury of working at triple-screen desktop stations, but some--myself included--are usually running around all day and work on 13-inch Macs. For the latter, the micromanagement of applications and tabs is a stress-inducing and time-consuming process. </p>
+
+          <p>Of course, programmers are not the only group plagued by this problem, but this is a good place to start.</p>
+        </div>
+      </div>
+      <div class="row">
+        <p>The benefit of laptops is that they are relatively light and portable. The downside is that they have limited screen space. Adding an extra monitor isn't an option if you're going for light and portable. Nonetheless, it's hard to argue against the benefits of an extra monitor. Research shows that, "whether you measure your productivity in facts researched, alien spaceships vaporized, or articles written, adding an extra monitor will give your output a considerable boost — 20 percent to 30 percent, according to a survey by Jon Peddie Research" ("<a class="value" target="_blank" href="http://www.nytimes.com/2006/04/20/technology/20basics.html?ei=5090&en=6fc17b9bf54ea2ef&ex=1303185600&adxnnl=1&partner=rssuserland&emc=rss&adxnnlx=1145537733-/Kdyvqpu0/eVBVNBYUcsqg">The Virtues of a Second Screen</a>", <em>New York Times</em>).</p>
+
+        <p>Perhaps there is a middle ground between portability and screen space. After observing and interviewing a full-time programmer who deals with this problem by carrying around multiple laptops, I decided to redesign the experience. The result is what I call iFly, a name that comes with the promise of an explanation.</p>
+      </div>
+      </br>
+      <div class="row">
+        <div class="one-third column value-center">
+          <!-- <h2 class="value-multiplier">67%</h2> -->
+          <a class="button" href="#experience" style="color:white;">Experience</a>
+        </div>
+        <div class="one-third column value-center">
+          <a class="button" href="#solutionsSec" style="color:white;">Problems and Solutions</a>
+        </div>
+        <div class="one-third column value-center">
+          <a class="button" href="#redesign" style="color:white;">Redesign</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div id="experience" class="container">
+      <div class="row">
+        <h4>Paul's Experience</h4>
+      </div>
+      <div class="row">
+        <div class="one-third column value">
+          <h5>[Chapter 1] A Brief Bio</h5>
+          <p>Paul is a full-time programmer. He is the head of Gameblox, a block-based game programming platform, at the MIT Media Lab. </p>
+          <img class="u-max-full-width" src="images/paul.png">
+          <h5>[Chapter 2] A Brief Story</h5>
+          <p>I observed Paul for ~15 minutes as he worked on the Gameblox codebase.</p>
+          <p>Paul had 2 MacBooks in front of him, one for tracking down a bug in Gameblox, and one for testing the new mobile interface. Let's call them laptop1 and laptop2, respectively. He said that doing both tasks on the same laptop would require jumping between too many applications and tabs, as well as cause slowness. Laptop1 had ~30 tabs open in Chrome and ~30 icons on the dock, while laptop2 had around half as many for each but is twice as slow, due to having to compile the mobile code. In order, these are the things that Paul did.
+        </div>
+        <div class="one-third column value">
+          <ol class="arrow">
+            <li type="square">Runs terminal command on laptop2.</li>
+            <li type="square">While command runs, switches to laptop1 by moving a small distance with his swivel chair.</li>
+            <li type="square">On laptop1, goes to Gameblox tab in Chrome and clicks to cause bug.</li>
+            <li type="square">Upon seeing the bug, goes to finder to open relevant files in Sublime.</li>
+            <li type="square">Looks like the terminal command on laptop2 is done running. Switches to laptop2 and runs another terminal command.</li>
+            <li type="square">While command runs, switches back to laptop1 and opens Chrome.</li>
+            <li type="square">Opens console in Chrome and drags console out into its own window in order to add break points to live code.</li>
+            <li type="square">Cmd-tabs between Gameblox, console window, and Sublime countless times.</li>
+            <li type="square">Switches to laptop2 to run another terminal command.</li>
+            <li type="square">Cmd-tabs between Gameblox, console window, and Sublime some more.</li>
+            <li type="square">Switches to laptop2 to run another terminal command...Okay you get the idea.</li>
+            <li type="square">Looks up all of a sudden. What's going on? Ah, a UROP needs assistance. (Paul has an army of UROPs and has to deal with their code in addition to his own.)</li>
+            <li type="square">Decides to check helpless UROPs code on one of his laptops. But...</li>
+            <li type="square">Which laptop to use? Laptop1 is too crowded, and laptop2 is too slow...</li>
+            <li type="square">Is laptop3 about to enter the story?</li>
+          </ol>
+        </div>
+        <div class="one-third column value">
+          <img class="u-max-full-width" src="images/paulScreens.png">
+          <h5>[Chapter 3] A Brief Interview</h5>
+          <p>After creepily watching Paul for 15 minutes, I asked him and his favorite UROP Raul (also a Mac user) about their opinions on single vs multi-screen programming.
+          <blockquote class="slim-quote">My problem with using multiple screens with the same computer is that I sometimes lose my mouse pointer when I switch between the screens.</blockquote>
+          <p class="name">--Paul</p>
+          <blockquote class="slim-quote">It's hard to find things when I have too many windows open.</blockquote>
+          <p class="name">--Raul</p>
+        </div>
+      </div>
+      <p></p>
+      <div style="text-align:center;">
+        <a id="solutions" class="button button-primary" style="background-color:#00CCCC;border-color:#00CCCC;" href="#solutionsSec">Up Next: Problems and Solutions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section values">
+    <div id="solutionsSec" class="container">
+      <div class="row value-center">
+        <h4>Problems and Solutions</h4>
+      </div>
+      <div class="row">
+        <div class="two columns value">
+          </p>
+        </div>
+        <div class="eight columns value">
+          <p>Based on Paul's experience, let's summarize the problems with programming on a single screen laptop.</p>
+          <div class="row">
+            <div class="two columns value">
+              </p>
+            </div>
+            <div class="three columns value">
+              <img class="u-max-full-width" src="images/tooMuch.png">
+            </div>
+            <div class="five columns value">
+              <b>Too much</b> ~ Paul hesitated about looking at the helpless UROP's code on laptop1 because he felt he had reached his limit on number of tabs (30) and applications (30) open. Opening more would result in diminishing returns.
+            </div>
+            <div class="two columns value">
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="two columns value">
+              </p>
+            </div>
+            <div class="three columns value">
+              <img class="u-max-full-width" src="images/tooSmall.png">
+            </div>
+            <div class="five columns value">
+              <b>Too small</b> ~ A small screen means that users cannot (comfortably) look at 2 windows at once. Cmb-tabbing between 2 windows is okay. But 3, as Paul was doing, might be pushing it. 
+            </div>
+            <div class="two columns value">
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="two columns value">
+              </p>
+            </div>
+            <div class="three columns value">
+              <img class="u-max-full-width" src="images/tooSlow.png">
+            </div>
+            <div class="five columns value">
+              <b>Too slow</b> ~ Running too many things on one laptop causes slowness, which is one of the reasons Paul uses 2 laptops.
+            </div>
+            <div class="two columns value">
+              </p>
+            </div>
+          </div>
+          <br><br>
+          These problems show that programming on a single-screen laptop is not only INEFFICIENT but also STRESSFUL. So let us come with some solutions!
+          <p></p>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th class="firstCol thLeft">Problem</th>
+                <th class="thRight">Solutions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="firstCol">Too much</td>
+                <td>Add a screen! Sort tabs and applications into 2 screens.</td>
+              </tr>
+              <tr>
+                <td class="firstCol">Too small</td>
+                <td>Add a screen! When jumping between 2 windows, put one on each screen.</td>
+              </tr>
+              <tr>
+                <td class="firstCol">Too slow</td>
+                <td>Buy more RAM? This problem is outside the scope of this project...</td>
+              </tr>              
+            </tbody>
+          </table>
+          </br>
+          <p>Looks like another screen would solve the bulk of Paul's problems. But again, how do we reconcile an extra screen with portability...?</p>
+          <br>
+          <div style="text-align:center;">
+            <a class="button" href="#redesign" style="color:white;">Up Next: Redesign</a>
+          </div>
+        </div>
+        <div class="two columns value">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div id="redesign" class="container">
+      <h4 style="text-align:center;">Introducing...iFly</h4>
+      <div class="row">
+        <div class="eight columns value">
+          <img class="u-max-full-width" src="images/redesign.png">
+        </div>
+        <div class="four columns value">
+          <p>Here's the redesign, iFly! It's basically a regular laptop, but when you attach the extra screens, <a class="section" target="_blank"  href="http://thumbs.dreamstime.com/t/laptop-flying-blue-background-32089884.jpg">it flies</a> (not).</p>
+          <p>iFly has 2 extra screens in addition to the original one, one on each side. The extra screens are...</p>
+            <ol class="arrow">
+              <li type="square">...removable! Just a regular laptop without 'em</li>
+              <li type="square">...powered by laptop through joint</li>
+              <li type="square">...rotatable</li>
+              <li type="square">...lightweight and therefore portable</li>
+            </ol>
+        </div>
+      </div>
+      <p></p>
+      <h5>Additional Features</h5>
+      <div class="row">
+        There are a lot of possibilities here. For instance, Paul mentioned that he doesn't like losing his mouse pointer when using multiple screens. He prefers how, when he uses 2 laptops, he has 2 separate mouse pointers. One way to solve this problem would be to allow for the option of having separate mouse pointers on separate screens, and the active mouse pointer would be determined by a keystroke of some sort. But taking a step back, designers should never fail to consider killing the middle man--or mouse rather. Virtual reality systems detect user intention through head and eye movements. Similarly, we can determine the active screen by detecting which way the user is facing or looking. (Thanks, Paul, for the idea.) But then further problems arise. What if the user is looking at a screen but operating on another one? What if there are multiple users in front of the screens? This problem gets more interesting by the second.</p>
+
+        <p>On a different note, what if we slap some touch-sensing on the extra screens and...TA-DA we have dual-function screen-tablets (screenblets?). Why not, it's just the reverse of what people are already doing--<a class="section" target="_blank" href="http://www.instructables.com/id/Tablet-Second-Monitor/">using tablets as second screens</a>.</p>
+
+        <p>If you are interested in iFly, please contact <a class="section" href="mailto:znie@mit.edu" target="_top">Helen Nie</a>. Thanks for reading!</p>
+      </div>
+      </br>
+      <div style="text-align:center;">
+        <a id="backToTop" class="button button-primary" style="background-color:#00CCCC;border-color:#00CCCC;" href="#top">Back to the top</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var bounce = new Bounce();
+  var xMax = 30;
+  var yMax = 30;
+  var d = 2000;
+  var b = 8;
+  var s = 1;
+  var scale = 1.1;
+  bounce.scale({
+    from: { x: 1, y: 1 },
+    to: { x: scale, y: scale},
+    duration: d,
+    bounce: b,
+    stiffness: s,
+  }).scale({
+    from: { x: 1, y: 1 },
+    to: { x: 1/scale, y: 1/scale},
+    duration: d,
+    delay: 300,
+    bounce: b,
+    stiffness: s
+  });
+
+  var bounceMac = new Bounce();
+  var scaleMac = 1.2;
+  bounceMac.translate({
+    from: { x: -1000, y: 0},
+    to: { x: 0, y: 0},
+    duration: 13000,
+  }).scale({
+    from: { x: 1, y: 1 },
+    to: { x: scaleMac, y: scaleMac},
+    duration: d*1.5,
+    bounce: b,
+    stiffness: s,
+    delay: 2000
+  }).scale({
+    from: { x: 1, y: 1 },
+    to: { x: 1/scaleMac, y: 1/scaleMac},
+    duration: d*1.5,
+    delay: 300*1.5+2000,
+    bounce: b,
+    stiffness: s
+  });
+
+  bounceMac.applyTo(document.querySelectorAll("#macbook"));
+
+  document.getElementById('getStarted').onmouseover = function () {
+    bounce.applyTo(document.querySelectorAll("#getStarted"));
+  };
+
+  document.getElementById('solutions').onmouseover = function () {
+    bounce.applyTo(document.querySelectorAll("#solutions"));
+  };
+
+  document.getElementById('backToTop').onmouseover = function () {
+    bounce.applyTo(document.querySelectorAll("#backToTop"));
+  };
+
+</script>
+
+</html>

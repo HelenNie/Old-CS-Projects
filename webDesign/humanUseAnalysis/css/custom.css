@@ -1,0 +1,264 @@
+.firstCol {
+  font-weight:bold;
+}
+
+.name {
+  text-align: right;
+}
+
+a.value:link {
+  color: white;
+}
+
+a.value:visited {
+  color: white;
+}
+
+a.value:hover {
+  color: #D0D0D0;
+}
+
+a.value:active {
+  color: white;
+}
+
+a.section:link {
+  color: #00CCCC;
+}
+
+a.section:visited {
+  color: #00CCCC;
+}
+
+a.section:hover {
+  color: #D0D0D0;
+}
+
+a.section:active {
+  color: #00CCCC;
+}
+
+img {
+  padding: 0px 0px 15px 0px;
+  border-radius: 30px; 
+}
+
+th {
+  text-align: center;
+  background-color:white;
+  color:black;
+}
+
+.thLeft{
+  border-radius:10px 0px 0px;
+}
+
+.thRight{ 
+  border-radius:0px 10px 0px 0px;
+}
+
+td {
+  text-align: center;
+}
+
+.arrow {
+
+  list-style-image: url('../images/arrow.png');
+}
+
+blockquote {
+  border-left: 20px;
+  border-right: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 0.5em 0px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: 1.2em;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.6em;
+}
+blockquote p {
+  display: inline;
+}
+
+.slim-quote {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 1.0em;
+}
+
+h5 {
+  color: #00CCCC;
+  text-align:left;
+}
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button-primary {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: justify;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.macbook {
+  position: relative;
+}
+.macbook {
+  position: relative;
+  max-width: 100%;
+  margin: -2rem auto 20rem;
+}
+.macbook + .macbook {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  text-align: center;
+  opacity: .8;
+  font-weight: 300;
+}
+
+.value-center {
+  text-align: center;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+  <head>
+    {% block head %}
+    <link href="/static/css/myStyle.css" rel="stylesheet" media="screen">
+
+    <script src="/static/js/jquery-1.12.1.min.js"></script>
+
+    <title>Sentences Display</title> <!--A classy page title-->
+
+    {% endblock %}
+  </head> 
+
+  <body>
+    {% block body %}
+      <div id="buttonDiv">
+        <button id="reset" class="button" type="button">Reset</button>
+      </div>
+      <div id="sentenceDiv">
+        <p id="sentence"></p>
+      </div>
+
+	  <script type="text/javascript">
+	  	var sentences;
+	  	var i;
+      var finished = false;
+
+        $( document ).ready(function() {
+          resetDisplay();
+        });
+
+        $('#reset').click(function(){
+          resetDisplay();
+        });
+
+        document.body.onkeyup = function(e){
+          if(e.keyCode == 65){
+            if (i == 0) {
+              $('#reset').prop("disabled", false);
+              $('#sentence').css({'fontSize': 84});
+            }
+            if (i == sentences.length-60) {
+              if (!finished) {
+                finish();
+              }
+              return;
+            }
+            $('#sentence').text(sentences[i]);
+            i++;
+          }
+        }
+
+        function finish() {
+          finished = true;
+          $.getJSON("/save_indexes");
+          $('#sentence').css({'fontSize': 42});
+          $('#sentence').text("You have reached the end. Thank you.");
+        }
+
+        function resetDisplay() {
+          finished = false;
+          $('#sentence').css({'fontSize': 42});
+          $('#sentence').html("Press A to start \n and to go to the next sentence.");
+          i = 0;
+          getSentences();
+          $('#reset').prop("disabled", true);
+        }
+
+        function getSentences() {
+          $.getJSON("/get_sentences", function(data) {
+            sentences = data;
+          });
+        }
+
+        /*
+          $('#start').click(function(){
+          $('#start').prop("disabled", true);
+          $('#reset').prop("disabled", false);
+          if (i == 0) {
+            $('#sentence').text("Starting in 3 seconds");
+            timeout = setTimeout(displaySentences, 3000);
+          } else {
+            pause = false;
+            timeout = setTimeout(displaySentences, 3000);
+          }
+        });
+
+        $('#pause').click(function(){
+          $('#pause').prop("disabled", true);
+          $('#start').prop("disabled", false);
+          $('#reset').prop("disabled", false);
+          window.clearTimeout(timeout)
+        });
+      */
+
+	  </script>
+
+    {% endblock %}
+  </body>
+
+
+</html>

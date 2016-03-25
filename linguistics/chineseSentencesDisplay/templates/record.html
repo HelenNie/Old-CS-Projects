@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+  {% extends 'home.html' %}
+
+  <head>
+    {% block head %}
+
+    {{ super() }}
+    <title>Results</title> 
+
+    {% endblock %}
+  </head> 
+
+  <body>
+    {% block body %}
+
+    <div id="record">
+      {% for line in record %}
+        <p> {{ line.decode('utf-8')}} </p>
+      {% endfor %}
+    </div>
+
+    {% endblock %}
+  </body>
+
+
+</html>
