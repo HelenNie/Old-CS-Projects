@@ -3,7 +3,7 @@ My-Projects
 
 Hello!
 
-My name is Helen. I am a junior at MIT studying mechanical engineering and product design. I have been programming since high school and have used programming as a tool in a variety of projects.
+My name is Helen Nie. I am a junior at MIT studying mechanical engineering and product design. I have been programming since high school and have used programming as a tool in a variety of projects.
 
 1. I learned to program in high school, and my projects from high school CS classes are in the OldHighSchoolProjects folder. 
 2. At MIT, I got involved with computer science education and block-based programming languages, namely App Inventor and Gameblox. None of that code is here of course.
